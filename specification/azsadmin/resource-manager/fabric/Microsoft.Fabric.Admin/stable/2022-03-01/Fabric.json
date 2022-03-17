@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "2016-05-01",
+    "version": "2022-03-01",
     "title": "FabricAdminClient",
     "description": "The Admin Fabric Management Client."
   },
@@ -170,7 +170,7 @@
       "description": "Client API Version.",
       "required": true,
       "type": "string",
-      "default": "2016-05-01"
+      "default": "2022-03-01"
     },
     "LocationParameter": {
       "description": "Location of the resource.",

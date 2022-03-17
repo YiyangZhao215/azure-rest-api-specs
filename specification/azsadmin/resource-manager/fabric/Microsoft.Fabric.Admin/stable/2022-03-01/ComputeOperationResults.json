@@ -3,7 +3,7 @@
   "info": {
     "description": "Compute operation results.",
     "title": "FabricAdminClient",
-    "version": "2016-05-01"
+    "version": "2022-03-01"
   },
   "host": "management.azure.com",
   "schemes": [
