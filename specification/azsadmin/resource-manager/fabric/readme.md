@@ -5,7 +5,9 @@
 This is the AutoRest configuration file for Fabric Admin.
 
 ---
+
 ## Getting Started
+
 To build the SDK for Fabric Admin, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -13,20 +15,52 @@ To build the SDK for Fabric Admin, simply [Install AutoRest](https://aka.ms/auto
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
 ### Basic Information
+
 These are the global settings for the Fabric API.
 
 ``` yaml
 title: FabricAdminClient
 description: Fabric Admin Client
 openapi-type: arm
-tag: package-2019-05-01
+tag: package-2022-03
 ```
 
+
+### Tag: package-2022-03
+
+These settings apply only when `--tag=package-2022-03` is specified on the command line.
+
+```yaml $(tag) == 'package-2022-03'
+input-file:
+  - Microsoft.Fabric.Admin/stable/2022-03-01/ApplicationOperationResults.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/Common.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/ComputeOperationResults.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/EdgeGateway.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/EdgeGatewayPool.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/Fabric.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/FabricLocation.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/FileShare.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/InfraRole.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/InfraRoleInstance.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/IpPool.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/LogicalNetwork.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/LogicalSubnet.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/MacAddressPool.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/NetworkOperationResults.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/ScaleUnit.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/ScaleUnitNode.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/SlbMuxInstance.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/StorageOperationResults.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/StoragePool.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/StorageSystem.json
+  - Microsoft.Fabric.Admin/stable/2022-03-01/Volume.json
+```
 ### Tag: package-2016-05-01
 
 These settings apply only when `--tag=package-2016-05-01` is specified on the command line.
@@ -118,6 +152,7 @@ input-file:
 ```
 
 ## Suppression
+
 ``` yaml
 directive:
   - suppress: DefinitionsPropertiesNamesCamelCase
@@ -131,6 +166,7 @@ directive:
 ```
 
 ---
+
 # Code Generation
 
 ## C#
@@ -148,7 +184,7 @@ csharp:
   clear-output-folder: true
 ```
 
-## Multi-API/Profile support for AutoRest v3 generators 
+## Multi-API/Profile support for AutoRest v3 generators
 
 AutoRest V3 generators require the use of `--tag=all-api-versions` to select api files.
 
@@ -193,7 +229,7 @@ input-file:
 
 ```
 
-If there are files that should not be in the `all-api-versions` set, 
+If there are files that should not be in the `all-api-versions` set,
 uncomment the  `exclude-file` section below and add the file paths.
 
 ``` yaml $(tag) == 'all-api-versions'
